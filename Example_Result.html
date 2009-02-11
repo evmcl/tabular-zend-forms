@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!--
+
+MIT Style License
+
+Copyright (c) 2009 Evan McLean - http://evanmclean.com/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, distribute with modifications,
+sublicense, and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name(s) of the above copyright holders
+shall not be used in advertising or otherwise to promote the sale, use or other
+dealings in this Software without prior written authorization.
+
+-->
+  <title>Example Tabular Zend Form</title>
+
+  <!-- Some simple styling of the form. -->
+  <style type="text/css">
+    table.zend_form td {
+      padding: 5px 5px 5px 5px;
+      vertical-align: baseline;
+      text-align: right;
+    }
+
+    table.zend_form td.element {
+      text-align: left;
+    }
+
+    table.zend_form td label {
+      font-weight: bold;
+    }
+
+    table.zend_form ul.errors {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<!-- FROM OUTPUT STARTS HERE -->
+
+<form enctype="application/x-www-form-urlencoded" action="/register/register" method="post">
+
+  <table class="zend_form">
+
+    <input type="hidden" name="posturl" value="http://www.google.com/" id="posturl" />
+
+    <tr>
+      <td>
+	<label for="email" class="display_hidden optional">Email</label>
+      </td>
+
+      <td class="element">
+	evan@example.com
+	<input type="hidden" name="email" value="evan@example.com" class="display_hidden" id="email" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<label for="salutation" class="required">Salutation</label>
+      </td>
+
+      <td class="element">
+	<select name="salutation" id="salutation">
+	  <option value="" label=""></option>
+	  <option value="Dr." label="Dr.">Dr.</option>
+	  <option value="Miss" label="Miss">Miss</option>
+	  <option value="Mr." label="Mr.">Mr.</option>
+	  <option value="Mrs." label="Mrs.">Mrs.</option>
+	  <option value="Ms." label="Ms.">Ms.</option>
+	</select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<label for="firstname" class="required">First Name</label>
+      </td>
+
+      <td class="element">
+	<input type="text" name="firstname" id="firstname" value="">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<label for="surname" class="required">Surname</label>
+      </td>
+
+      <td class="element">
+	<input type="text" name="surname" id="surname" value="">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<label for="phone" class="optional">Phone</label>
+      </td>
+
+      <td class="element">
+	<input type="text" name="phone" id="phone" value="">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<label for="mobile" class="optional">Mobile</label>
+      </td>
+
+      <td class="element">
+	<input type="text" name="mobile" id="mobile" value="">
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      
+      <td class="submit">
+	<input type="submit" name="register" id="register" value="Register" class="first_submit">
+	<input type="submit" name="back" id="back" value="Back" class="last_submit">
+      </td>
+    </tr>
+  </table>
+</form>
+
+<!-- FROM OUTPUT ENDS HERE -->
+
+</body>
+</html>
